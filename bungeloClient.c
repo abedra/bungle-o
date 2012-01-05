@@ -26,7 +26,7 @@ static int persist(redisContext *c, const char *key, const char *value) {
   return(response);
 }
 
-int main(void)
+int startBungeloClient(void)
 {
   void *context = zmq_init(1);
   void *receiver = zmq_socket(context, ZMQ_PULL);

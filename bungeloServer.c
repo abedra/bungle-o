@@ -25,7 +25,7 @@ tofu_rep_t *post(tofu_req_t *req, void *socket) {
   return rep;
 }
 
-int main() {
+int startBungeloServer() {
   char *opts[] = { "0.0.0.0", "5000" };
   tofu_ctx_t *ctx = tofu_ctx_init(TOFU_EVHTTP, opts);
   void *context = zmq_init(1);

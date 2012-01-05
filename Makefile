@@ -1,11 +1,5 @@
-all: server client
-
-server:
-	gcc -o server bungleo-server.c -lzmq -ltofu
-
-client:
-	gcc -o client bungleo-client.c -lzmq -ljson -lhiredis
+bungelo: 
+	gcc bungeloClient.c bungeloServer.c bungelo.c -o bungelo -lzmq -lhiredis -ljson -ltofu
 
 clean:
-	rm server
-	rm client
+	rm bungelo
