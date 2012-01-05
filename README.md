@@ -6,33 +6,35 @@ At the moment this only runs on linux. The Tofu library doesn't yet compile agai
 
 ## Dependencies
 
-* For compiling the Tofu library
-** jansson
-  
-    wget http://www.digip.org/jansson/releases/jansson-2.2.1.tar.gz
-	tar xvzf jansson-2.2.1.tar.gz
-	cd janson-2.2.1
-	./configure
-	make
-	sudo make install
+For compiling the Tofu library
 
- ** libevent
+jansson
+
+    wget http://www.digip.org/jansson/releases/jansson-2.2.1.tar.gz
+    tar xvzf jansson-2.2.1.tar.gz
+    cd janson-2.2.1
+    ./configure
+    make
+    sudo make install
+
+libevent
     
-	wget https://github.com/downloads/libevent/libevent/libevent-2.0.16-stable.tar.gz
-	tar xvzf libevent-2.0.16-stable
-	./configure
-	make
-	sudo make install
+    wget https://github.com/downloads/libevent/libevent/libevent-2.0.16-stable.tar.gz
+    tar xvzf libevent-2.0.16-stable
+    ./configure
+    make
+    sudo make install
 
 * The Tofu library itself
     
-	sudo apt-get install autoconf automake libtool libpcre3 libpcre3-dev libfcgi-dev
-	git clone git://github.com/AlexBio/Tofu
-	cd Tofu
-	./autogen.sh
-	./configure
-	make
-	sudo make install
+
+    sudo apt-get install autoconf automake libtool libpcre3 libpcre3-dev libfcgi-dev
+    git clone git://github.com/AlexBio/Tofu
+    cd Tofu
+    ./autogen.sh
+    ./configure
+    make
+    sudo make install
 
 * 0MQ
 
