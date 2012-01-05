@@ -63,5 +63,3 @@ hiredis
     ./bungelo --client
     curl -d '{"id" : "bungle-o", "message" : "test message"}' http://localhost:5000
     redis-cli smembers bungelo
-
-You should see a message printed from the client every time something is posted to the server
