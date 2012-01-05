@@ -3,6 +3,7 @@
 #include <string.h>
 #include <zmq.h>
 #include "json/json.h"
+#include "hiredis/hiredis.h"
 
 static char * zrecv(void *socket) {
   zmq_msg_t message;
@@ -18,12 +19,25 @@ static char * zrecv(void *socket) {
   return(string);
 }
 
+static int persist(redisContext *c, const char *key, const char *value) {
+  redisReply *reply = redisCommand(c, "SET %s %s", key, value);
+  int response = reply->type;
+  freeReplyObject(reply);
+  return(response);
+}
+
 int main(void)
 {
   void *context = zmq_init(1);
   void *receiver = zmq_socket(context, ZMQ_PULL);
   zmq_connect(receiver, "tcp://localhost:5555");
   
+  redisContext *c = redisConnect("127.0.0.1", 6379);
+  if(c->err) {
+    printf("Error: %s\n", c->errstr);
+    return 1;
+  }
+
   const char *id, *message;
   char *string;
   struct json_object *obj;
@@ -33,10 +47,10 @@ int main(void)
     obj = json_tokener_parse(string);
     id = json_object_get_string(json_object_object_get(obj, "id"));
     message = json_object_get_string(json_object_object_get(obj, "message"));
-    
-    printf("id is %s and message is %s\n", id, message);
+    persist(c, id, message);
   }
 
+  redisFree(c);
   zmq_close(receiver);
   zmq_term(context);
   return 0;
