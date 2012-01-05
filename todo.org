@@ -1,0 +1,4 @@
+* TODO combine into single executable with cli args to start server/client
+* TODO run through valgrind and cleanup mess
+* TODO put together proper configure (possibly autoconf)
+* TODO add benchmarking bits
