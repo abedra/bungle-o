@@ -20,7 +20,7 @@ static char * zrecv(void *socket) {
 }
 
 static int persist(redisContext *c, const char *key, const char *value) {
-  redisReply *reply = redisCommand(c, "SET %s %s", key, value);
+  redisReply *reply = redisCommand(c, "SADD %s %s", key, value);
   int response = reply->type;
   freeReplyObject(reply);
   return(response);
