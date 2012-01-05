@@ -1,5 +1,7 @@
 # bungle-o
 
+bungle-o is a data capturing service built on top of zeromq, tofu, and redis. It uses the redis push/pull model with an http endpoint as the front end. The current focus is creating a hoptoad/airbrake style capturing endpoint. The compatability with hoptoad/airbrake messages is still in the works, but the foundation is all present. Later, the goal will be to open the capturing up to other things like logging, metrics reporting etc., to enable a one stop place for capturing data inside your infrastructure. While you only start one bungelo server, you can have as many clients as your heart desires to handle processing all of the messages that come in.
+
 ## Notes
 
 At the moment this only runs on linux. The Tofu library doesn't yet compile against OS X. Once that is resolved everything should work properly on OS X
@@ -43,14 +45,23 @@ libjson
 
     sudo apt-get install libjson0 libjson0-dev
 
+hiredis
+
+    git clone https://github.com/antirez/hiredis
+    cd hiredis
+    make
+    sudo make install
+    sudo ldconfig
+    
 ## Building bungle-o
 
     make
 	
 ## Using bungle-o
 
-    ./server
-    ./client
+    ./bungelo --server
+    ./bungelo --client
     curl -d '{"id" : "bungle-o", "message" : "test message"}' http://localhost:5000
+    redis-cli smembers bungelo
 
 You should see a message printed from the client every time something is posted to the server
