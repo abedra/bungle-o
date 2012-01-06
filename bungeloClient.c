@@ -6,13 +6,15 @@
 #include "hiredis/hiredis.h"
 
 static char * zrecv(void *socket) {
+  int size;
+  char *string;
   zmq_msg_t message;
   zmq_msg_init(&message);
   
   if(zmq_recv(socket, &message, 0)) return(NULL);
   
-  int size = zmq_msg_size(&message);
-  char *string = malloc(size + 1);
+  size = zmq_msg_size(&message);
+  string = malloc(size + 1);
   memcpy(string, zmq_msg_data(&message), size);
   zmq_msg_close(&message);
   string[size] = 0;
@@ -28,19 +30,22 @@ static int persist(redisContext *c, const char *key, const char *value) {
 
 int startBungeloClient(void)
 {
-  void *context = zmq_init(1);
-  void *receiver = zmq_socket(context, ZMQ_PULL);
+  redisContext *c;
+  void *context; 
+  void *receiver;
+  char *string;
+  const char *id, *message;
+  struct json_object *obj;
+
+  context = zmq_init(1);
+  receiver = zmq_socket(context, ZMQ_PULL);
   zmq_connect(receiver, "tcp://localhost:5555");
-  
-  redisContext *c = redisConnect("127.0.0.1", 6379);
+  c = redisConnect("127.0.0.1", 6379);
+
   if(c->err) {
     printf("Error: %s\n", c->errstr);
     return 1;
   }
-
-  const char *id, *message;
-  char *string;
-  struct json_object *obj;
 
   while(1) {
     string = zrecv(receiver);

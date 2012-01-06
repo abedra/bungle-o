@@ -1,5 +1,6 @@
 #include <stdio.h>
 #include <stdlib.h>
+#include <string.h>
 #include "bungeloClient.h"
 #include "bungeloServer.h"
 
@@ -9,17 +10,19 @@ static void printUsage(void) {
 
 int main(int argc, char **argv)
 {
+  char *mode;
+
   if(argc != 2) {
     printUsage();
     return 1;
   }
 
-  char *mode = argv[1];
+  mode = argv[1];
 
   if(strcmp(mode, "--client") == 0) {
     printf("Starting bungelo client...\n");
     startBungeloClient();
-    } else if(strcmp(mode, "--server") == 0) {
+  } else if(strcmp(mode, "--server") == 0) {
     printf("Starting bungelo server...\n");
     startBungeloServer();
   } else {
@@ -27,4 +30,6 @@ int main(int argc, char **argv)
     printUsage();
     return 2;
   }
+
+  return 0;
 }
