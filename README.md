@@ -2,10 +2,6 @@
 
 bungle-o is a data capturing service built on top of zeromq, tofu, and redis. It uses the redis push/pull model with an http endpoint as the front end. The current focus is creating a hoptoad/airbrake style capturing endpoint. The compatability with hoptoad/airbrake messages is still in the works, but the foundation is all present. Later, the goal will be to open the capturing up to other things like logging, metrics reporting etc., to enable a one stop place for capturing data inside your infrastructure. While you only start one bungelo server, you can have as many clients as your heart desires to handle processing all of the messages that come in.
 
-## Notes
-
-At the moment this only runs on linux. The Tofu library doesn't yet compile against OS X. Once that is resolved everything should work properly on OS X
-
 ## Dependencies
 
 For compiling the Tofu library
