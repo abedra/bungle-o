@@ -2,8 +2,8 @@
 #include <stdlib.h>
 #include <string.h>
 #include <getopt.h>
-#include "bungeloClient.h"
-#include "bungeloServer.h"
+#include "bungleoClient.h"
+#include "bungleoServer.h"
 
 static void printUsage(void) {
   printf("Usage: bungleo\n  -h, --help\n  -c, --client\n  -s, --server\n");
@@ -56,10 +56,10 @@ int main(int argc, char **argv)
     return 1;
   } else if (server) {
     printf("Starting bungle-o server...\n");
-    startBungeloClient();
+    startBungleoServer();
   } else if (client) {
     printf("Starting bungle-o client...\n");
-    startBungeloServer();
+    startBungleoClient();
   } else {
     printUsage();
     return 1;

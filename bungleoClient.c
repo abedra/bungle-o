@@ -28,7 +28,7 @@ static int persist(redisContext *c, const char *key, const char *value) {
   return(response);
 }
 
-int startBungeloClient(void)
+int startBungleoClient(void)
 {
   redisContext *c;
   void *context; 
