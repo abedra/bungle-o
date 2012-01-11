@@ -1,0 +1,147 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<notice version="2.2">
+  <api-key>940565f0319292af514a83844d7c8159</api-key>
+  <notifier>
+    <name>Airbrake Notifier</name>
+    <version>3.0.9</version>
+    <url>http://airbrake.io</url>
+  </notifier>
+  <error>
+    <class>AirbrakeTestingException</class>
+    <message>AirbrakeTestingException: Testing airbrake via "rake airbrake:test". If you can see this, it works.</message>
+    <backtrace>
+      <line number="412" file="[GEM_ROOT]/gems/activesupport-3.1.3/lib/active_support/callbacks.rb" method="_run__2882294676281421396__process_action__2362229145243066178__callbacks"/>
+      <line number="386" file="[GEM_ROOT]/gems/activesupport-3.1.3/lib/active_support/callbacks.rb" method="_run_process_action_callbacks"/>
+      <line number="81" file="[GEM_ROOT]/gems/activesupport-3.1.3/lib/active_support/callbacks.rb" method="run_callbacks"/>
+      <line number="17" file="[GEM_ROOT]/gems/actionpack-3.1.3/lib/abstract_controller/callbacks.rb" method="process_action"/>
+      <line number="17" file="[GEM_ROOT]/gems/actionpack-3.1.3/lib/action_controller/metal/rescue.rb" method="process_action"/>
+      <line number="30" file="[GEM_ROOT]/gems/actionpack-3.1.3/lib/action_controller/metal/instrumentation.rb" method="block in process_action"/>
+      <line number="53" file="[GEM_ROOT]/gems/activesupport-3.1.3/lib/active_support/notifications.rb" method="block in instrument"/>
+      <line number="21" file="[GEM_ROOT]/gems/activesupport-3.1.3/lib/active_support/notifications/instrumenter.rb" method="instrument"/>
+      <line number="53" file="[GEM_ROOT]/gems/activesupport-3.1.3/lib/active_support/notifications.rb" method="instrument"/>
+      <line number="29" file="[GEM_ROOT]/gems/actionpack-3.1.3/lib/action_controller/metal/instrumentation.rb" method="process_action"/>
+      <line number="201" file="[GEM_ROOT]/gems/actionpack-3.1.3/lib/action_controller/metal/params_wrapper.rb" method="process_action"/>
+      <line number="18" file="[GEM_ROOT]/gems/activerecord-3.1.3/lib/active_record/railties/controller_runtime.rb" method="process_action"/>
+      <line number="121" file="[GEM_ROOT]/gems/actionpack-3.1.3/lib/abstract_controller/base.rb" method="process"/>
+      <line number="45" file="[GEM_ROOT]/gems/actionpack-3.1.3/lib/abstract_controller/rendering.rb" method="process"/>
+      <line number="193" file="[GEM_ROOT]/gems/actionpack-3.1.3/lib/action_controller/metal.rb" method="dispatch"/>
+      <line number="14" file="[GEM_ROOT]/gems/actionpack-3.1.3/lib/action_controller/metal/rack_delegation.rb" method="dispatch"/>
+      <line number="236" file="[GEM_ROOT]/gems/actionpack-3.1.3/lib/action_controller/metal.rb" method="block in action"/>
+      <line number="65" file="[GEM_ROOT]/gems/actionpack-3.1.3/lib/action_dispatch/routing/route_set.rb" method="call"/>
+      <line number="65" file="[GEM_ROOT]/gems/actionpack-3.1.3/lib/action_dispatch/routing/route_set.rb" method="dispatch"/>
+      <line number="29" file="[GEM_ROOT]/gems/actionpack-3.1.3/lib/action_dispatch/routing/route_set.rb" method="call"/>
+      <line number="152" file="[GEM_ROOT]/gems/rack-mount-0.8.3/lib/rack/mount/route_set.rb" method="block in call"/>
+      <line number="96" file="[GEM_ROOT]/gems/rack-mount-0.8.3/lib/rack/mount/code_generation.rb" method="block in recognize"/>
+      <line number="75" file="[GEM_ROOT]/gems/rack-mount-0.8.3/lib/rack/mount/code_generation.rb" method="optimized_each"/>
+      <line number="95" file="[GEM_ROOT]/gems/rack-mount-0.8.3/lib/rack/mount/code_generation.rb" method="recognize"/>
+      <line number="141" file="[GEM_ROOT]/gems/rack-mount-0.8.3/lib/rack/mount/route_set.rb" method="call"/>
+      <line number="532" file="[GEM_ROOT]/gems/actionpack-3.1.3/lib/action_dispatch/routing/route_set.rb" method="call"/>
+      <line number="17" file="[GEM_ROOT]/gems/actionpack-3.1.3/lib/action_dispatch/middleware/best_standards_support.rb" method="call"/>
+      <line number="23" file="[GEM_ROOT]/gems/rack-1.3.6/lib/rack/etag.rb" method="call"/>
+      <line number="25" file="[GEM_ROOT]/gems/rack-1.3.6/lib/rack/conditionalget.rb" method="call"/>
+      <line number="14" file="[GEM_ROOT]/gems/actionpack-3.1.3/lib/action_dispatch/middleware/head.rb" method="call"/>
+      <line number="21" file="[GEM_ROOT]/gems/actionpack-3.1.3/lib/action_dispatch/middleware/params_parser.rb" method="call"/>
+      <line number="247" file="[GEM_ROOT]/gems/actionpack-3.1.3/lib/action_dispatch/middleware/flash.rb" method="call"/>
+      <line number="195" file="[GEM_ROOT]/gems/rack-1.3.6/lib/rack/session/abstract/id.rb" method="context"/>
+      <line number="190" file="[GEM_ROOT]/gems/rack-1.3.6/lib/rack/session/abstract/id.rb" method="call"/>
+      <line number="331" file="[GEM_ROOT]/gems/actionpack-3.1.3/lib/action_dispatch/middleware/cookies.rb" method="call"/>
+      <line number="64" file="[GEM_ROOT]/gems/activerecord-3.1.3/lib/active_record/query_cache.rb" method="call"/>
+      <line number="477" file="[GEM_ROOT]/gems/activerecord-3.1.3/lib/active_record/connection_adapters/abstract/connection_pool.rb" method="call"/>
+      <line number="29" file="[GEM_ROOT]/gems/actionpack-3.1.3/lib/action_dispatch/middleware/callbacks.rb" method="block in call"/>
+      <line number="392" file="[GEM_ROOT]/gems/activesupport-3.1.3/lib/active_support/callbacks.rb" method="_run_call_callbacks"/>
+      <line number="81" file="[GEM_ROOT]/gems/activesupport-3.1.3/lib/active_support/callbacks.rb" method="run_callbacks"/>
+      <line number="28" file="[GEM_ROOT]/gems/actionpack-3.1.3/lib/action_dispatch/middleware/callbacks.rb" method="call"/>
+      <line number="68" file="[GEM_ROOT]/gems/actionpack-3.1.3/lib/action_dispatch/middleware/reloader.rb" method="call"/>
+      <line number="101" file="[GEM_ROOT]/gems/rack-1.3.6/lib/rack/sendfile.rb" method="call"/>
+      <line number="48" file="[GEM_ROOT]/gems/actionpack-3.1.3/lib/action_dispatch/middleware/remote_ip.rb" method="call"/>
+      <line number="47" file="[GEM_ROOT]/gems/actionpack-3.1.3/lib/action_dispatch/middleware/show_exceptions.rb" method="call"/>
+      <line number="13" file="[GEM_ROOT]/gems/railties-3.1.3/lib/rails/rack/logger.rb" method="call"/>
+      <line number="24" file="[GEM_ROOT]/gems/rack-1.3.6/lib/rack/methodoverride.rb" method="call"/>
+      <line number="17" file="[GEM_ROOT]/gems/rack-1.3.6/lib/rack/runtime.rb" method="call"/>
+      <line number="72" file="[GEM_ROOT]/gems/activesupport-3.1.3/lib/active_support/cache/strategy/local_cache.rb" method="call"/>
+      <line number="15" file="[GEM_ROOT]/gems/rack-1.3.6/lib/rack/lock.rb" method="call"/>
+      <line number="53" file="[GEM_ROOT]/gems/actionpack-3.1.3/lib/action_dispatch/middleware/static.rb" method="call"/>
+      <line number="456" file="[GEM_ROOT]/gems/railties-3.1.3/lib/rails/engine.rb" method="call"/>
+      <line number="205" file="[GEM_ROOT]/gems/rake-0.9.2.2/lib/rake/task.rb" method="call"/>
+      <line number="205" file="[GEM_ROOT]/gems/rake-0.9.2.2/lib/rake/task.rb" method="block in execute"/>
+      <line number="200" file="[GEM_ROOT]/gems/rake-0.9.2.2/lib/rake/task.rb" method="each"/>
+      <line number="200" file="[GEM_ROOT]/gems/rake-0.9.2.2/lib/rake/task.rb" method="execute"/>
+      <line number="158" file="[GEM_ROOT]/gems/rake-0.9.2.2/lib/rake/task.rb" method="block in invoke_with_call_chain"/>
+      <line number="211" file="/Users/abedra/.rvm/rubies/ruby-1.9.3-p0/lib/ruby/1.9.1/monitor.rb" method="mon_synchronize"/>
+      <line number="151" file="[GEM_ROOT]/gems/rake-0.9.2.2/lib/rake/task.rb" method="invoke_with_call_chain"/>
+      <line number="144" file="[GEM_ROOT]/gems/rake-0.9.2.2/lib/rake/task.rb" method="invoke"/>
+      <line number="116" file="[GEM_ROOT]/gems/rake-0.9.2.2/lib/rake/application.rb" method="invoke_task"/>
+      <line number="94" file="[GEM_ROOT]/gems/rake-0.9.2.2/lib/rake/application.rb" method="block (2 levels) in top_level"/>
+      <line number="94" file="[GEM_ROOT]/gems/rake-0.9.2.2/lib/rake/application.rb" method="each"/>
+      <line number="94" file="[GEM_ROOT]/gems/rake-0.9.2.2/lib/rake/application.rb" method="block in top_level"/>
+      <line number="133" file="[GEM_ROOT]/gems/rake-0.9.2.2/lib/rake/application.rb" method="standard_exception_handling"/>
+      <line number="88" file="[GEM_ROOT]/gems/rake-0.9.2.2/lib/rake/application.rb" method="top_level"/>
+      <line number="66" file="[GEM_ROOT]/gems/rake-0.9.2.2/lib/rake/application.rb" method="block in run"/>
+      <line number="133" file="[GEM_ROOT]/gems/rake-0.9.2.2/lib/rake/application.rb" method="standard_exception_handling"/>
+      <line number="63" file="[GEM_ROOT]/gems/rake-0.9.2.2/lib/rake/application.rb" method="run"/>
+      <line number="33" file="[GEM_ROOT]/gems/rake-0.9.2.2/bin/rake" method="&lt;top (required)&gt;"/>
+      <line number="19" file="[GEM_ROOT]/bin/rake" method="load"/>
+      <line number="19" file="[GEM_ROOT]/bin/rake" method="&lt;main&gt;"/>
+    </backtrace>
+  </error>
+  <request>
+    <url>http://example.org/verify</url>
+    <component>application</component>
+    <action>verify</action>
+    <params>
+      <var key="action">verify</var>
+      <var key="controller">application</var>
+    </params>
+    <cgi-data>
+      <var key="rack.version">["1", "1"]</var>
+      <var key="rack.input">#&lt;StringIO:0x007ff87cbe39b8&gt;</var>
+      <var key="rack.errors">#&lt;StringIO:0x007ff87cbe4160&gt;</var>
+      <var key="rack.multithread">false</var>
+      <var key="rack.multiprocess">true</var>
+      <var key="rack.run_once">false</var>
+      <var key="REQUEST_METHOD">GET</var>
+      <var key="SERVER_NAME">example.org</var>
+      <var key="SERVER_PORT">80</var>
+      <var key="QUERY_STRING"></var>
+      <var key="PATH_INFO">/verify</var>
+      <var key="rack.url_scheme">http</var>
+      <var key="HTTPS">off</var><var key="SCRIPT_NAME"></var>
+      <var key="CONTENT_LENGTH">0</var>
+      <var key="action_dispatch.routes">#&lt;ActionDispatch::Routing::RouteSet:0x007ff87eb2da30&gt;</var>
+      <var key="action_dispatch.parameter_filter">["password"]</var>
+      <var key="action_dispatch.secret_token">56c73528864f4f9fdf5a331fc1ee7153caf595493e1b02a8648807d1c6d058076e2009339aa61402863444ce7683e4556352677d6232779e2f07f7b928fd5a10</var>
+      <var key="action_dispatch.show_exceptions">true</var>
+      <var key="action_dispatch.remote_ip"></var>
+      <var key="rack.session"></var>
+      <var key="rack.session.options">
+	<var key="key">_example_session</var>
+	<var key="path">/</var><var key="domain"></var>
+	<var key="expire_after"></var><var key="secure">false</var>
+	<var key="httponly">true</var><var key="defer">false</var>
+	<var key="renew">false</var><var key="coder">#&lt;Rack::Session::Cookie::Base64::Marshal:0x007ff87c8f7bc8&gt;</var>
+	<var key="id"></var></var><var key="rack.request.cookie_hash"></var>
+	<var key="action_dispatch.cookies">#&lt;ActionDispatch::Cookies::CookieJar:0x007ff87ed4d9f0&gt;</var>
+	<var key="action_dispatch.request.unsigned_session_cookie"></var>
+	<var key="action_dispatch.request.path_parameters">
+	  <var key="action">verify</var>
+	  <var key="controller">application</var>
+	</var>
+	<var key="action_controller.instance">#&lt;ApplicationController:0x007ff87ed7dd80&gt;</var>
+	<var key="action_dispatch.request.content_type"></var>
+	<var key="action_dispatch.request.request_parameters"></var>
+	<var key="rack.request.query_string"></var>
+	<var key="rack.request.query_hash"></var>
+	<var key="action_dispatch.request.query_parameters"></var>
+	<var key="action_dispatch.request.parameters">
+	  <var key="action">verify</var>
+	  <var key="controller">application</var>
+	</var>
+	<var key="action_dispatch.request.formats">["text/html"]</var>
+    </cgi-data>
+  </request>
+  <server-environment>
+    <project-root>/Users/abedra/Desktop/example</project-root>
+    <environment-name>development</environment-name>
+    <hostname>reducto.local</hostname>
+  </server-environment>
+</notice>
