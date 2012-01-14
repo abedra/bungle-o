@@ -29,9 +29,8 @@ tofu_rep_t *airbrake(tofu_req_t *req, void *socket) {
   tofu_rep_t *rep = tofu_rep_init();
   int body_len;
   char *body = tofu_body(req, &body_len);
-  printf("%s\n", body);
 
-  /* Airbrake sends things in via xml. Need to pull in libxml to handle this request.  */
+  zsend(socket, body);
 
   tofu_status(rep, 200);
   return rep;
