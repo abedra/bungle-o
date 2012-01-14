@@ -64,7 +64,7 @@ int main(int argc, char **argv)
   e = read(argv[1]);
   printf("Got error from class %s with message %s\n", e->class, e->message);
 
-  free(e);
+  if (e) free(e);
   xmlCleanupParser();
   xmlMemoryDump();
 
