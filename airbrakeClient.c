@@ -22,17 +22,10 @@ char *search(char *q, xmlDocPtr doc, xmlXPathContextPtr xpathCtx) {
   nodes = xpathObj->nodesetval;
   size = (nodes) ? nodes->nodeNr : 0;
 
-  if (size == 1) {
-    printf("node %s\n", xmlNodeGetContent(nodes->nodeTab[0]));
-  } else {
-    for (i = 0; i < size; i++) {
-      cur = nodes->nodeTab[i];
-      printf("node %s\n", xmlNodeGetContent(cur));
-    }
-  }
+  result = xmlNodeGetContent(nodes->nodeTab[0]);
 
   xmlXPathFreeObject(xpathObj);
-  result = "";
+
   return result;
 }
 
@@ -41,7 +34,7 @@ int main(int argc, char **argv)
   xmlDocPtr doc;
   xmlXPathContextPtr xpathCtx;
   
-  char *filename;
+  char *filename, *class, *message;
 
   filename = argv[1];
 
@@ -58,8 +51,11 @@ int main(int argc, char **argv)
     return 1;
   }
 
-  search("/notice/error/class", doc, xpathCtx);
-  search("/notice/error/message", doc, xpathCtx);
+  class = search("/notice/error/class", doc, xpathCtx);
+  message = search("/notice/error/message", doc, xpathCtx);
+
+  printf("class: %s\n", class);
+  printf("message: %s\n", message);
 
   xmlXPathFreeContext(xpathCtx);
   xmlFreeDoc(doc);

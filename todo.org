@@ -1,5 +1,5 @@
 * DONE combine into single executable with cli args to start server/client
   CLOSED: [2012-01-05 Thu 13:21]
-* TODO run through valgrind and cleanup mess
+* INPR run through valgrind and cleanup mess
 * TODO put together proper configure (possibly autoconf)
 * TODO add benchmarking bits

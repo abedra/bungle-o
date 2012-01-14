@@ -4,8 +4,6 @@ bungle-o is a data capturing service built on top of zeromq, tofu, and redis. It
 
 ## Dependencies
 
-For compiling the Tofu library
-
 jansson
 
     wget http://www.digip.org/jansson/releases/jansson-2.2.1.tar.gz
